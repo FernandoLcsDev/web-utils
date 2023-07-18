@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/text_editor.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+</head>
+<body>
+    <div style="width: 50%;">
+
+        <div id="txt-editor">
+            <div class="list-btn">
+                <button onclick="bold()" class="edt-btn btn-bold">B</button>
+                <button onclick="italic()" class="edt-btn btn-italic">I</button>
+                <button onclick="underline()" class="edt-btn btn-underline">U</button>
+                <button onclick="strikethrough()" class="edt-btn btn-line-through">S</button>
+                <button onclick="overline()" class="edt-btn btn-overline">O</button>
+                <button onclick="alignLeft()" class="edt-btn btn-icon"><img src="icons/align-left-solid.svg" alt=""></button>
+                <button onclick="alignCenter()" class="edt-btn btn-icon"><img src="icons/align-center-solid.svg" alt=""></button>
+                <button onclick="alignRight()" class="edt-btn btn-icon"><img src="icons/align-right-solid.svg" alt=""></button>
+                <button onclick="alignJustify()" class="edt-btn btn-icon"><img src="icons/align-justify-solid.svg" alt=""></button>
+            </div>
+            
+            <div class="list-btn">
+                <label for="fontSize">Tamanho da Fonte:</label>
+                <select id="fontSize" onchange="format('fontSize', this.value)">
+                  <option value="1">Pequeno</option>
+                  <option value="2">Médio</option>
+                  <option value="3">Grande</option>
+                </select>
+                <label for="textColor">Cor do Texto:</label>
+                <input type="color" id="textColor" onchange="format('textColor', this.value)">
+            </div>
+            <div contenteditable="true" id="textArea"></div>
+        </div>
+    </div>
+</body>
+</html>
